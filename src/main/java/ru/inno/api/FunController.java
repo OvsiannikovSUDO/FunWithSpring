@@ -1,10 +1,14 @@
 package ru.inno.api;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import ru.inno.api.model.FunFactModel;
 import ru.inno.services.FunService;
 
-@RestController
+@Controller
 public class FunController {
 
     private final FunService funService;
@@ -13,8 +17,16 @@ public class FunController {
         this.funService = funService;
     }
 
-    @GetMapping
-    public String getFun() {
+    @GetMapping("random")
+    @ResponseBody
+    public FunFactModel getFun() {
         return funService.getRandomFact();
+    }
+
+    // http://localhost:8080/?name=John
+    @GetMapping
+    public String getFunTest(final Model model, @RequestParam(defaultValue = "World") final String name) {
+        model.addAttribute("name", name);
+        return "welcome";
     }
 }

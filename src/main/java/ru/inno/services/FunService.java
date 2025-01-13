@@ -1,6 +1,7 @@
 package ru.inno.services;
 
 import org.springframework.stereotype.Service;
+import ru.inno.api.model.FunFactModel;
 import ru.inno.repo.FunRepo;
 
 import java.util.Random;
@@ -14,9 +15,9 @@ public class FunService {
         this.repo = repo;
     }
 
-    public String getRandomFact() {
+    public FunFactModel getRandomFact() {
         final var list = repo.getList();
         final String fact = list.get(new Random().nextInt(list.size()));
-        return fact;
+        return new FunFactModel(1, fact);
     }
 }
