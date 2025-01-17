@@ -1,8 +1,8 @@
 package ru.inno.services;
 
 import org.springframework.stereotype.Service;
-import ru.inno.api.model.FunFactModel;
-import ru.inno.repo.FunRepo;
+import ru.inno.controllers.model.FunFactModel;
+import ru.inno.repositories.FunRepo;
 
 import java.util.Random;
 

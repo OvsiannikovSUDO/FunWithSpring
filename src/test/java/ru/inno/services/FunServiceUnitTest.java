@@ -6,8 +6,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import ru.inno.api.model.FunFactModel;
-import ru.inno.repo.FunRepo;
+import ru.inno.controllers.model.FunFactModel;
+import ru.inno.repositories.FunRepo;
 
 import java.util.List;
 

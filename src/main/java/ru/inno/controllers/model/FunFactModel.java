@@ -1,4 +1,4 @@
-package ru.inno.api.model;
+package ru.inno.controllers.model;
 
 public record FunFactModel(long id, String fact) {
 

@@ -1,11 +1,11 @@
-package ru.inno.api;
+package ru.inno.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import ru.inno.api.model.FunFactModel;
+import ru.inno.controllers.model.FunFactModel;
 import ru.inno.services.FunService;
 
 @Controller

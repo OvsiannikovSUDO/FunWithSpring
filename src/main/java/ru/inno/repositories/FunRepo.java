@@ -1,4 +1,4 @@
-package ru.inno.repo;
+package ru.inno.repositories;
 
 import org.springframework.stereotype.Repository;
 
