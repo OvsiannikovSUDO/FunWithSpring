@@ -1,0 +1,15 @@
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+
+management:
+  endpoint:
+    health:
+      show-components: always
+      show-details: always
+
+integration:
+  fun-fact:
+    url: "https://api.api-ninjas.com/v1/facts"
+    api-key: ${KEY}
