@@ -32,10 +32,26 @@ public class FunController {
         this.config = config;
     }
 
+    /**
+     * @deprecated Use "/api/random"
+     * @return
+     */
     @GetMapping("random")
     @ResponseBody
+    @Deprecated(forRemoval = true)
     public FunFactModel getFun() {
         return funService.getRandomFact();
+    }
+
+    @GetMapping("check1")
+    @ResponseBody
+    public String getFun1() {
+        return "welcome";
+    }
+
+    @GetMapping("check2")
+    public String getFun2() {
+        return "welcome";
     }
 
     // http://localhost:8080/?name=John

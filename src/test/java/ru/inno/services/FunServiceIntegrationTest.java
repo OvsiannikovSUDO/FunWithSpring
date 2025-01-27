@@ -1,7 +1,6 @@
 package ru.inno.services;
 
 import org.hamcrest.CoreMatchers;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -27,7 +26,7 @@ class FunServiceIntegrationTest {
 
     @Test
     void canGetFact() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/random")
+        mvc.perform(MockMvcRequestBuilders.get("/api/random")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content()

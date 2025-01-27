@@ -1,0 +1,14 @@
+### GET request to example server
+GET http://localhost:8080/api/fact
+
+### POST example
+POST http://localhost:8080/api/fact
+Content-Type: application/json
+
+{"text": "srwer"}
+
+### PUT example
+PUT http://localhost:8080/api/fact/-3056484234522868691
+Content-Type: application/json
+
+{"text": "rrrr"}

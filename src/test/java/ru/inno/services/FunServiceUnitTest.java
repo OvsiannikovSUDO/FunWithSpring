@@ -9,9 +9,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import ru.inno.controllers.model.FunFactModel;
 import ru.inno.repositories.FunRepo;
 
-import java.util.List;
+import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 class FunServiceUnitTest {
@@ -28,7 +28,7 @@ class FunServiceUnitTest {
 
     @Test
     void checkIfWeHaveFun() {
-        Mockito.doReturn(List.of("Fact1")).when(funRepo).getList();
+        Mockito.doReturn(Map.of(1L, "Fact1")).when(funRepo).getList();
         final var randomFact = funService.getRandomFact();
         assertEquals(new FunFactModel(1, "Fact1"), randomFact);
     }
