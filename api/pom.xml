@@ -3,28 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.1</version>
+        <groupId>ru.innopolis</groupId>
+        <artifactId>FunWithSpring</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>ru.innopolis</groupId>
-    <artifactId>FunWithSpring</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>api</module>
-        <module>ui</module>
-        <module>fun</module>
-    </modules>
+    <artifactId>api</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot.build-image.imageName>docker.io/library/fun-with-spring:${project.version}</spring-boot.build-image.imageName>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
