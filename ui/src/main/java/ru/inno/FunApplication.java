@@ -5,6 +5,7 @@ import io.micrometer.core.instrument.binder.MeterBinder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
@@ -12,6 +13,7 @@ import ru.inno.repo.FunRepo;
 import ru.inno.services.FunServiceClient;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy(exposeProxy = true)
 public class FunApplication {
 
     public static void main(String[] args) {

@@ -10,19 +10,23 @@ import ru.inno.FunService;
 import ru.inno.exceptions.EntryNotExistsException;
 import ru.inno.model.ErrorModel;
 import ru.inno.model.FunFactModel;
+import ru.inno.services.TestService;
 
 @RestController
 @RequestMapping("/api")
 public class FunApiController {
 
     private final FunService funService;
+    private final TestService testService;
 
-    public FunApiController(final FunService funService) {
+    public FunApiController(final FunService funService, final TestService testService) {
         this.funService = funService;
+        this.testService = testService;
     }
 
     @GetMapping("random")
     public FunFactModel getFun() {
+        testService.doSomething();
         return funService.getRandomFact();
     }
 
